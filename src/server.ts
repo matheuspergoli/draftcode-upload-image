@@ -6,7 +6,12 @@ import { routes } from './routes'
 dotenv.config()
 export const app = express()
 
-app.use(cors())
+app.use(
+	cors({
+		credentials: true,
+		origin: process.env.FRONTEND_URL
+	})
+)
 app.use(express.json())
 
 // Routes
