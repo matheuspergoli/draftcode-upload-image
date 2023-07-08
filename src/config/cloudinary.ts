@@ -20,7 +20,8 @@ export const uploadToCloudinary = async (path: string, folder: string) => {
 			aspect_ratio: '16:9'
 		}
 	})
-	return { url: result.url, public_id: result.public_id }
+
+	return { url: result.secure_url, public_id: result.public_id }
 }
 
 export const deleteFromCloudinary = async (public_id: string) => {
