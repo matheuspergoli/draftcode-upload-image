@@ -1,11 +1,11 @@
 import type { Request, Response, NextFunction } from 'express'
 
 export const restrictOrigin = (req: Request, res: Response, next: NextFunction) => {
-	const allowedOrigin = ['http://localhost:3000', 'https://draftcode.vercel.app']
+	const allowedOrigin = 'https://draftcode.vercel.app'
 
-	if (!allowedOrigin.includes(req.headers.origin || '')) {
+	if (req.headers.origin !== allowedOrigin) {
 		return res.status(403).json({
-			message: 'You are not allowed to access this resource'
+			message: 'Forbidden'
 		})
 	}
 
