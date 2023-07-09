@@ -14,8 +14,7 @@ export const uploadToCloudinary = async (path: string, folder: string) => {
 	const result = await cloudinary.uploader.upload(path, {
 		folder,
 		transformation: {
-			quality: 100,
-			aspect_ratio: '16:9'
+			quality: 100
 		}
 	})
 
