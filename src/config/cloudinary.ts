@@ -13,6 +13,7 @@ cloudinary.config({
 export const uploadToCloudinary = async (path: string, folder: string) => {
 	const result = await cloudinary.uploader.upload(path, {
 		folder,
+		format: 'webp',
 		transformation: {
 			quality: 100
 		}
