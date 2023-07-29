@@ -15,6 +15,10 @@ Para utilizar este microsserviço, é necessário que você forneça um arquivo 
 
 Você consegue obter essas informações no painel de controle do cloudinary exceto pelo `FRONTEND_URL`, essa variável é o endereço do frontend que irá consumir o microsserviço, em desenvolvimento você pode utilizar `http://localhost:3000`.
 
+Configure o `cloudinary` seguindo o passo a passo [aqui](docs/cloudinary/CLOUDINARY.MD), é necessário que você crie uma conta no cloudinary.
+
+Sem o cloudinary configurado, o microsserviço não irá funcionar.
+
 ## Como rodar
 
 Para rodar o microsserviço, basta executar o comando:
